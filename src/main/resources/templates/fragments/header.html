@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}"/>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+  <title>header</title>
+</head>
+<body>
+<div class="navbarcss mb-2" th:fragment="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+      <ul class="navbar-nav ml-auto text-center">
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/about}">About</a>
+        </li>
+        <!--
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/}">Tasks</a>
+        </li>-->
+      </ul>
+    </div>
+    <div class="mx-auto my-2 order-0 order-md-1 position-relative">
+      <a class="mx-auto" th:href="@{/}">
+        <img th:src="@{/pictures/logo_froomi.png}" class="img_in_nav">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
+      <ul class="navbar-nav mr-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/apartmentlist}">Apartment list</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/studentList}">Student list</a>
+        </li>
+        <!--
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/}">Map</a>
+        </li>-->
+      </ul>
+    </div>
+  </nav>
+</div>
+</body>
+</html>
